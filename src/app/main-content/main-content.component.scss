@@ -1,0 +1,71 @@
+.header{
+    text-align: center;
+    // margin-top: 80px;
+    background-color: #086A87;
+    opacity: 0.7;
+    padding: 50px;
+    border-radius: 5px;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url("^assets/background_1920x1080.jpg");
+    // background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.body_margin{
+  padding: 50px;
+}
+
+.selection{
+    margin-left: 50px;
+   
+}
+
+
+
+
+
+
+
+.card_country {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
+    background-color: #088A85;
+    opacity: 0.8;
+    float: left;
+  }
+  
+  .card_artist {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
+    background-color: #088A85;
+    opacity: 0.8;
+    float: right;
+  }
+
+  .card_detail{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
+    background-color: #088A85;
+    opacity: 0.8;
+    margin-left: 580px;
+  }
+
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container {
+    padding: 2px 16px;
+    
+  }

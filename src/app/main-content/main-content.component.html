@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MusicSearch</title>
+    <base href="/">
+    <meta name="viewport">
+</head>
+
+
+<body>
+    <h1 class="header">Find your favorite music and artists!
+        <form [formGroup]="formular" (ngSubmit)="onSubmit()">
+            <div>
+                <input type="text" formControlName="artist_search" placeholder="Search">
+            </div>
+            <button type="submit">Go!</button>
+        </form>
+
+    </h1>
+    <div class="body_margin">
+
+
+        <!-- Select Country with top ten artist -->
+
+        <div class="card_country">
+            <h2>Most popular countrys:</h2>
+            <div class="container">
+                <ul class="list">
+                    <div class="selection">
+                        <select>
+                            <option selected="selected" (click)="getTopCountry_spain()">Spain</option> <!--  -->
+                            <option (click)="getTopCountry_germany()">Germany</option>
+                            <option (click)="getTopCountry_italy()">Italy</option>
+                        </select>
+                    </div>
+
+                </ul>
+                <div *ngFor="let item of [].constructor(10); let i = index">
+                    {{i+1}}. &nbsp;{{geo.artist}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button>View Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Tracks & Album -->
+
+        <div class="card_artist">
+            <h2>Top Tracks & Albums</h2>
+
+            <div class="container">
+                <ul class="list">
+                    <p>Tracks</p>
+                    <div *ngFor="let track of tracks">
+                        <li> {{track.name}}</li>
+                        <li> {{track.listeners}} </li>
+                    </div>
+                    <p>Albums</p>
+                    <div *ngFor="let album of albums">
+                        <li> {{album.name}}</li>
+                        <li> {{album.listeners}} </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Detail view artist -->
+        <div class="card_detail">
+            <h2>Details</h2>
+            <div class="container">
+                <ul class="list">
+                    <img src="{{ artist.image }}">
+                    <li>{{artist.name}}</li>
+                    <li> Listeners: {{artist.listeners}} </li>
+                    <li> Playcount: {{artist.playcount}} </li>
+                    <li> {{artist.summary}} </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>
